@@ -38,13 +38,13 @@ resume-skill-extractor/
 │       ├── labeled_jobs.json          # Full Gemini-labeled dataset
 │       ├── labeled_jobs_clean.json    # Cleaned dataset (3,050 rows)
 │       ├── labeled_jobs_test.json     # Test run output (5 rows)
-│       └── removed_rows.csv          # Removed junk rows for inspection
+│       ├── removed_rows.csv           # Removed junk rows for inspection
 ├── src/
 │   ├── data_prep.py           # Downloads and combines job datasets
 │   ├── generate_labels.py     # Uses Gemini API to extract skills
 │   ├── labeled_jobs_clean.py  # Cleans and filters labeled dataset
-│   └── available_models.py    # Lists available Gemini models
-├── fine_tuning_pre_trained_LLM.py  # Fine-tuning script (in progress)
+│   ├── available_models.py    # Lists available Gemini models
+|   └── train.py               # Fine-tuning script (in progress)
 ├── app.py                     # Gradio demo UI (coming soon)
 ├── requirements.txt
 └── README.md
@@ -67,10 +67,10 @@ resume-skill-extractor/
 - Fine-tuning method: QLoRA (4-bit quantization)
 
 ## Status
-- [x] Data collection and cleaning
-- [x] Label generation with Gemini API
-- [ ] Fine-tuning with LoRA
-- [ ] Gradio demo
+- ✅ Data collection and cleaning
+- ✅ Label generation with Gemini API  
+- 🔄 Fine-tuning with LoRA
+- ⏳ Gradio demo
 
 ## Why I built this
 Most job seekers struggle to tailor their resumes to specific roles. This tool 
