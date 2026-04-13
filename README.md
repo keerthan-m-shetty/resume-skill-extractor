@@ -44,6 +44,7 @@ resume-skill-extractor/
 │   ├── generate_labels.py     # Uses Gemini API to extract skills
 │   ├── labeled_jobs_clean.py  # Cleans and filters labeled dataset
 │   ├── available_models.py    # Lists available Gemini models
+│   ├── upload_dataset.py      # Pushes clean dataset to Hugging Face Hub
 |   └── train.py               # Fine-tuning script (in progress)
 ├── app.py                     # Gradio demo UI (coming soon)
 ├── requirements.txt
@@ -51,9 +52,10 @@ resume-skill-extractor/
 ```
 
 ## Dataset
-- 3,050 AI/Data Science job descriptions
-- Sources: [nathansutton/data-science-job-descriptions](https://huggingface.co/datasets/nathansutton/data-science-job-descriptions) + [batuhanmtl/job-skill-set](https://huggingface.co/datasets/batuhanmtl/job-skill-set)
-- Labels generated using Gemini 2.5 Flash Lite
+- **Hosted on Hugging Face:** [k10shetty/resume-skill-extractor-dataset](https://huggingface.co/datasets/k10shetty/resume-skill-extractor-dataset)
+- Contains 3,050 AI/Data Science job descriptions.
+- Labels (`summary` and `required_skills`) generated using Gemini 2.5 Flash Lite.
+- Sourced from: [nathansutton/data-science-job-descriptions](https://huggingface.co/datasets/nathansutton/data-science-job-descriptions) + [batuhanmtl/job-skill-set](https://huggingface.co/datasets/batuhanmtl/job-skill-set)
 
 ## Tech Stack
 - Python, PyTorch, Hugging Face Transformers
