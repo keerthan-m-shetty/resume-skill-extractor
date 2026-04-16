@@ -8,6 +8,7 @@ models/
 test.py
 wandb/
 training_logs.txt
+tea_debug.log
 # Gradio & Security
 .gradio/
 *.pem
