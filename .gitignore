@@ -6,3 +6,8 @@ models/
 *.pyc
 .DS_Store
 test.py
+wandb/
+training_logs.txt
+# Gradio & Security
+.gradio/
+*.pem
