@@ -5,7 +5,7 @@
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-An 8-Billion parameter Llama 3 model fine-tuned with QLoRA to analyze job descriptions and instantly extract required skills — helping candidates tailor their resumes to specific roles.
+An 8-Billion parameter Llama 3 model fine-tuned with QLoRA to analyze job descriptions and instantly extract required skills helping candidates tailor their resumes to specific roles.
 
 ## Demo
 
@@ -16,7 +16,7 @@ Paste any job description → get a concise summary + list of required skills in
 
 ## Example Output
 
-**Input:** Data Engineering role at smartclip, Berlin — processing terabytes of TV and advertising data...
+**Input:** Data Engineering role at smartclip, Berlin processing terabytes of TV and advertising data...
 
 **Output:**
 ```
@@ -72,10 +72,10 @@ resume-skill-extractor/
 
 ### 2. Fine-Tuning
 - Base model: [meta-llama/Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
-- Method: **QLoRA** — 4-bit NF4 quantization + LoRA rank 16, alpha 32
+- Method: **QLoRA** 4-bit NF4 quantization + LoRA rank 16, alpha 32
 - Target modules: all attention layers (`q_proj`, `k_proj`, `v_proj`, `o_proj`) + feed-forward layers (`gate_proj`, `up_proj`, `down_proj`)
 - Hardware: NVIDIA A10G (24GB VRAM) on Lightning AI
-- Training: 3 epochs, ~1,000 steps — loss reduced from 2.2 → 1.0
+- Training: 3 epochs, ~1,000 steps loss reduced from 2.2 → 1.0
 
 ### 3. Models on Hugging Face
 - LoRA Adapters: [k10shetty/resume-skill-extractor-lora](https://huggingface.co/k10shetty/resume-skill-extractor-lora)
